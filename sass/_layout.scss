@@ -7,8 +7,10 @@
     min-height: 50rem;
 }
 .header {
+    display: flex;
     background-color: var(--color-white);
-    height: 8rem;
+    height: 7rem;
+    justify-content: space-between;
 }
 
 .content {
