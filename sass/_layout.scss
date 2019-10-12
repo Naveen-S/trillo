@@ -21,9 +21,13 @@
     display: flex;
 }
 
-.side-bar {
+.sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%; // grow shrink basis
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .hotel-view {
