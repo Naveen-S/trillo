@@ -122,11 +122,21 @@
     font-size: 1.4rem;
     margin-top: 3.5rem;
     
+    @media only screen and (max-width: $bp-medium){
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
         list-style: none;
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            margin-bottom: 0 !important;
+            flex: 1;
         }
     }
 
@@ -184,6 +194,10 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium){
+        display: none;
+    }
 }
 
 

@@ -43,6 +43,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -135,11 +138,19 @@ body {
 .side-nav {
   font-size: 1.4rem;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative;
     list-style: none; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        margin-bottom: 0 !important;
+        flex: 1; } }
   .side-nav__item::before {
     content: '';
     background-color: var(--color-primary);
@@ -177,6 +188,9 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -309,6 +323,11 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   font-size: 1.4rem;
@@ -321,6 +340,9 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -360,7 +382,9 @@ body {
     .description .list__item::before {
       content: '';
       mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
       mask-size: cover;
+      -webkit-mask-size: cover;
       background-color: var(--color-primary);
       background-image: none;
       height: 1rem;
